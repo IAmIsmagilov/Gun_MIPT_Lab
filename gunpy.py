@@ -375,6 +375,7 @@ while not finished:
                 bullet_type = 1
             elif event.key == pygame.K_2:
                 bullet_type = 2
+    # При нажатии кнопки "1" клавиатуры гравитация становится стандартной
     if bullet_type == 1:
         for b in balls:
             b.move()
@@ -391,6 +392,7 @@ while not finished:
                     counter += spec_target.hit()
                     shots_counter = 0
                     spec_target.kill()
+    # При нажатии кнопки "2" клавиатуры меняется направление гравитации на обратное
     if bullet_type == 2:
         for b in balls:
             b.move_2()
